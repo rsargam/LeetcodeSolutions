@@ -1,12 +1,14 @@
-// Last updated: 13/09/2025, 01:19:03
+// Last updated: 13/09/2025, 01:21:22
 class Solution {
 public:
     bool doesAliceWin(string s) {
-        unordered_set<char>vowels={'a','e','i','o','u'};
+        int count=0;
         for(char c: s){
-            if(vowels.count(c))
-            return true;
+            if(c=='a' ||c=='e' ||c=='i' ||c=='o' ||c=='u')
+            count++;
         }
+        if(count==0)
         return false;
+        return true;
     }
 };
