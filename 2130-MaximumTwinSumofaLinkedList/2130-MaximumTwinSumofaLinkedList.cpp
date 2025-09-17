@@ -1,4 +1,4 @@
-// Last updated: 17/09/2025, 23:39:12
+// Last updated: 17/09/2025, 23:39:38
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -21,8 +21,7 @@ public:
         int i=0,j=ans.size()-1,result=0;
         while(i<j){
             result=max(result,ans[i]+ans[j]);
-            i++;
-            j--;
+            i++;j--;
         }
         return result;
     }
