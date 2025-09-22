@@ -1,17 +1,12 @@
-// Last updated: 22/09/2025, 22:54:39
+// Last updated: 22/09/2025, 22:55:39
 class StockSpanner {
 public:
 stack<pair<int,int>>st;
-    StockSpanner() {
-        
-    }
-    
     int next(int price) {
         int span=1;
         while(!st.empty() && st.top().first<=price){
-            span=span+st.top().second;
-            st.pop();
-            
+            span+=st.top().second;
+            st.pop();    
         }
         st.push({price,span});
         return span;
