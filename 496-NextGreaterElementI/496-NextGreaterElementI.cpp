@@ -1,4 +1,4 @@
-// Last updated: 13/10/2025, 00:52:12
+// Last updated: 21/10/2025, 22:13:11
 class Solution {
 public:
     vector<int> nextGreaterElement(vector<int>& nums1, vector<int>& nums2) {
