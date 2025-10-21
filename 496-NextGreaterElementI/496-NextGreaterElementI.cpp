@@ -1,4 +1,4 @@
-// Last updated: 21/10/2025, 22:13:11
+// Last updated: 21/10/2025, 22:43:43
 class Solution {
 public:
     vector<int> nextGreaterElement(vector<int>& nums1, vector<int>& nums2) {
@@ -8,7 +8,12 @@ public:
             while(!s.empty() && s.top()<= nums2[i]){
                 s.pop();
             }
-            next[nums2[i]]=s.empty()?-1:s.top();
+            if(s.empty()){
+                next[nums2[i]]=-1;
+            }
+            else{
+                next[nums2[i]]=s.top();
+            }
             s.push(nums2[i]);
         }
         vector<int>res;
