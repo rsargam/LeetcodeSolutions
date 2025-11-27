@@ -1,31 +1,31 @@
-// Last updated: 17/11/2025, 01:13:22
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode() : val(0), next(nullptr) {}
- *     ListNode(int x) : val(x), next(nullptr) {}
- *     ListNode(int x, ListNode *next) : val(x), next(next) {}
- * };
- */
-class Solution {
-public:
-    ListNode* oddEvenList(ListNode* head) {
-        if(head==NULL || head->next==NULL)
-        return head;
-
-        ListNode* odd=head;
-        ListNode* even=head->next;
-        ListNode* evenhead=even;
-        while(even!=NULL && even->next!=NULL){
-          odd->next=odd->next->next;
-          odd=odd->next;
-
-          even->next=even->next->next;
-          even=even->next;
-        }
-        odd->next=evenhead;
-        return head;
-    }
-};
+// Last updated: 27/11/2025, 23:57:12
+1/**
+2 * Definition for singly-linked list.
+3 * struct ListNode {
+4 *     int val;
+5 *     ListNode *next;
+6 *     ListNode() : val(0), next(nullptr) {}
+7 *     ListNode(int x) : val(x), next(nullptr) {}
+8 *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+9 * };
+10 */
+11class Solution {
+12public:
+13    ListNode* oddEvenList(ListNode* head) {
+14        if(head==NULL || head->next==NULL)
+15        return head;
+16
+17        ListNode* odd=head;
+18        ListNode* even=head->next;
+19        ListNode* evenhead=even;
+20        while(even!=NULL && even->next!=NULL){
+21          odd->next=odd->next->next;
+22          odd=odd->next;
+23
+24          even->next=even->next->next;
+25          even=even->next;
+26        }
+27        odd->next=evenhead;
+28        return head;
+29    }
+30};
