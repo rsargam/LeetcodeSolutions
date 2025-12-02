@@ -1,4 +1,4 @@
-// Last updated: 01/12/2025, 13:38:25
+// Last updated: 02/12/2025, 19:09:39
 1class Solution {
 2public:
 3    vector<vector<int>> merge(vector<vector<int>>& intervals) {
