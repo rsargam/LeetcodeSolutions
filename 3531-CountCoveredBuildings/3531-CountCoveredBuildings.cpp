@@ -1,4 +1,4 @@
-// Last updated: 12/12/2025, 00:05:13
+// Last updated: 13/12/2025, 00:20:31
 1class Solution {
 2public:
 3    int countCoveredBuildings(int n, vector<vector<int>>& buildings) {
