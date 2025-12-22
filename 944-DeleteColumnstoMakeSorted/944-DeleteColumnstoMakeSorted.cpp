@@ -1,4 +1,4 @@
-// Last updated: 21/12/2025, 01:10:41
+// Last updated: 22/12/2025, 22:30:49
 1class Solution {
 2public:
 3     bool isUnsorted(const vector<string>&strs, int j){
