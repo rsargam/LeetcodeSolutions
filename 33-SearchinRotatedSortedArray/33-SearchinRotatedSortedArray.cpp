@@ -1,32 +1,26 @@
-// Last updated: 20/01/2026, 10:31:26
+// Last updated: 20/01/2026, 10:46:03
 1class Solution {
 2public:
 3    int search(vector<int>& nums, int target) {
-4        int n=nums.size();
-5        int start=0;
-6        int end =n-1;
-7       
-8        while(start<=end){
-9            const int mid= start + (end - start) / 2;
-10            if(nums[mid]==target){
-11                return mid;
-12            }
-13            if(nums[start]<=nums[mid]){
-14                if(nums[start]<=target && target<nums[mid]){
-15                    end=mid-1;
-16                }
-17                else
-18                start=mid+1;
-19            }
-20            else{
-21                if(nums[mid]<target && target<=nums[end]){
-22                    start=mid+1;
-23                }
-24                else {
-25                    end=mid-1;
-26                }
-27            }
-28        }
-29        return -1;
-30    }
-31};
+4        int low=0,high=nums.size()-1;
+5        while(low<=high){
+6            int mid=low+(high-low)/2;
+7            if(target==nums[mid])
+8            return mid;
+9            if(nums[low]<=nums[mid]){
+10                if(target<nums[mid] && target>=nums[low])
+11                high=mid-1;
+12                else
+13                low=mid+1;
+14            }
+15            else if(nums[high]>=nums[mid]){
+16                if(target>nums[mid] && target<=nums[high])
+17                low=mid+1;
+18                else 
+19                high=mid-1;
+20            }
+21            
+22        }
+23        return -1;
+24    }
+25};
