@@ -1,23 +1,19 @@
-// Last updated: 22/08/2025, 23:53:35
-class Solution {
-public:
-
-void subsequence(vector<int>&arr,int index,int n,vector<vector<int> > &ans,vector<int>temp){
-
-    if(index==n){
-        ans.push_back(temp);
-        return;
-    }
-    subsequence(arr,index+1,n,ans,temp);
-    temp.push_back(arr[index]);
-    subsequence(arr,index+1,n,ans,temp); 
-    temp.pop_back();
-}
-  
-    vector<vector<int>> subsets(vector<int>& nums) {
-      vector<vector<int> > ans;
-   vector<int>temp;
-   subsequence(nums,0,nums.size(),ans,temp);  
-   return ans;
-    }
-};
+// Last updated: 22/01/2026, 10:25:24
+1class Solution {
+2public:
+3 vector<vector<int>>ans;
+4        vector<int>temp;
+5        void backtrack(int index,vector<int>&nums){
+6            ans.push_back(temp);
+7            for(int i=index;i<nums.size();i++){
+8                temp.push_back(nums[i]);
+9                backtrack(i+1,nums);
+10                temp.pop_back();
+11            }
+12        }
+13    vector<vector<int>> subsets(vector<int>& nums) {
+14       backtrack(0,nums);
+15       return ans;
+16
+17    }
+18};
