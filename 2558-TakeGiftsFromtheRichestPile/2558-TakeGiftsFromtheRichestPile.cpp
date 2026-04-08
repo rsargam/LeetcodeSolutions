@@ -1,4 +1,4 @@
-// Last updated: 08/04/2026, 12:10:38
+// Last updated: 08/04/2026, 12:10:46
 1class Solution {
 2public:
 3    long long pickGifts(vector<int>& gifts, int k) {
