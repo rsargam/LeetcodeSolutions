@@ -1,16 +1,18 @@
-// Last updated: 20/11/2025, 18:47:16
-class Solution {
-    
-public:
-    void rotate(vector<int>& nums, int k) {
-        int n=nums.size();
-        vector<int>rotated(n);
-        k=k%n;
-        for(int i=0;i<n;i++){
-            rotated[(i+k)%n]=nums[i];
-        }
-        for(int i=0;i<n;i++){
-            nums[i]=rotated[i];
-        }
-    }
-};
+// Last updated: 02/06/2026, 12:00:13
+1class Solution {
+2public:
+3    void rotate(vector<int>& nums, int k) {
+4        int n=nums.size();
+5        k=k%n;
+6        vector<int>rotated(n);
+7        for(int i=0;i<n;i++){
+8            rotated[(i+k)%n]=nums[i];
+9        }
+10        for (int i=0;i<n;i++){
+11            nums[i]=rotated[i];
+12        }
+13       
+14
+15
+16    }
+17};
