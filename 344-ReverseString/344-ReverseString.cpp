@@ -1,17 +1,17 @@
-// Last updated: 22/08/2025, 23:52:46
-class Solution {
-public:
-    void reverseString(vector<char>& s) {
-        stack<char>st;
-        for(int i=0;i<s.size();i++){
-            st.push(s[i]);
-        }
-        int i=0;
-        while(!st.empty()){
-            s[i]=st.top();
-            st.pop();
-            i++;
-        }
-        
-    }
-};
+// Last updated: 02/06/2026, 22:50:49
+1class Solution {
+2public:
+3    void reverseString(vector<char>& s) {
+4        stack<char>st;
+5        for(int i=0;i<s.size();i++){
+6            st.push(s[i]);
+7
+8        }
+9        for(int i=0;i<s.size();i++){
+10            int first=st.top();
+11            s[i]=first;
+12            st.pop();
+13        }
+14        
+15    }
+16};
